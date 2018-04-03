@@ -11,7 +11,9 @@
 source /etc/profile.d/modules.sh
 
 cd $SLURM_SUBMIT_DIR
-export MPI_EXEC=srun
+#export MPI_EXEC=srun
+export MPI_EXEC=mpirun
+
 
 module load   bench/jube-2.2.0        mpi/intelmpi/2018       lib/intel/hdf5/1.8.15   comp/gcc/7.3.0
 source /cluster/intel/compilers_and_libraries_2018/linux/bin/compilervars.sh intel64
